@@ -1,0 +1,145 @@
+/*
+Theme Name: Tecnibo
+Theme URI: https://github.com/younes-dro/tecnibo-theme
+Description: Tecnibo theme.
+Author: Younes DRO
+Author URI: https://github.com/younes-dro
+Template: oceanwp
+Version: 1.0
+*/
+
+body{
+    position: relative;
+    padding: 0;
+    background: #fff;
+    color: #554b4a;
+    font-family: 'Merriweather', serif;
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif!important;
+    color: #867e79;    
+    font-weight: 400;
+
+}
+p{
+    font-family: 'Merriweather', serif;
+    color: #867e79;
+    font-size: 1.5em;    
+}
+/* Parent stylesheet should be loaded from functions.php not using @import */
+#topbar-template{
+    /*border: 1px solid;*/
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px; 
+}
+
+/* Header */
+#site-header.transparent-header{
+    height: 80px!important;
+    margin-bottom: 0px!important;
+}
+.page-header{
+    padding: 0px !important;
+    background-color: #fff !important;
+    /* border: 1px solid; */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    min-height: 1px;  
+}
+
+/***************** Main Menu **********************************************/
+.sf-menu ul.sub-menu{
+    padding: 20px 10px;
+}
+.navigation>ul>li>ul.megamenu.sub-menu>li{
+    border-left-width: 0px;
+
+}
+#site-navigation-wrap nav#site-navigation ul#menu-main-menu li.menu-item a{
+    /*border:1px solid #f00;*/
+    font-size: 16px;
+    font-family: Oswald,sans-serif;
+    font-weight: 300!important;
+    color: #554b4a;
+}
+#site-navigation-wrap nav#site-navigation ul#menu-main-menu li.menu-item a:hover{
+    color:#e80100;
+}
+#site-navigation-wrap nav#site-navigation ul#menu-main-menu li.menu-item ul.sub-menu a{
+    /*border: 1px solid #f0f;*/
+}
+#site-navigation-wrap nav#site-navigation ul#menu-main-menu li.menu-item ul.sub-menu a:hover{
+    /*color: #e80100;*/
+}
+.dropdown-menu .sub-menu {
+    border-color: #13aff0!important;
+}
+.sf-menu ul.sub-menu{
+    top:109%!important;
+}
+.navigation .megamenu li ul.sub-menu{
+    border:none!important;
+}
+/***************** End Menu ********************/
+
+/***************** Custom arrow smart slider ********************************/
+div#n2-ss-1 .nextend-arrow{
+    /*    border: .125rem solid #e6e6e6;
+        border-radius: 50%    */
+}
+/***************** End Custom arrow smart slider ****************************/
+
+/* Custom Header for pages  */
+#site-header.transparent-header{
+    position: relative!important;
+    background-color:#fff!important;
+}
+/* Privacy menu */
+.privacy-menu-container{
+    line-height:60px;
+}
+ul#menu-privacy-menu{
+    list-style-type: none;
+    line-height:1px;
+    margin:0 auto;
+}
+ul#menu-privacy-menu li{
+    float: right;
+    margin-left: 10px;
+}
+ul#menu-privacy-menu li a{
+    color: #554b4a;
+    text-decoration: underline;
+    font-size:12px;
+}
+ul#menu-privacy-menu li a:hover{
+    text-decoration: none;
+}
+@media screen and (min-width: 768px){
+    div.copyright-title{
+        text-align: left!important;
+    }   
+}
+
+/* breadcrumbs */
+header.page-header nav.site-breadcrumbs{
+    /*border: 1px solid #f00;*/
+    left: 0;
+    top: 22px;
+}
+header.page-header .site-breadcrumbs a{
+    color: #867e79 !important;
+    /*border: 1px solid #f00;*/
+    /*left: 0;*/
+    /*top: 12px;*/
+}
