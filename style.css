@@ -56,7 +56,25 @@ p{
     margin-bottom: 0px;
     min-height: 1px;  
 }
-
+.sticky-header{
+    position: fixed!important;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    animation: slide-down 0.7s;
+    box-shadow: 1px 1px 4px;    
+}
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    } 
+    100% {
+        opacity: 0.9;
+        transform: translateY(0);
+    } 
+}
 /***************** Main Menu **********************************************/
 .sf-menu ul.sub-menu{
     padding: 20px 10px;
