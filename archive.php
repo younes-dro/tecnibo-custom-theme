@@ -17,7 +17,7 @@ get_header(); ?>
 			<?php do_action( 'ocean_before_content' ); ?>
 
 			<div id="content" class="site-content clr">
-                            
+
                             <?php
                                 $taxonomy_id = $wp_query->queried_object->term_id;
                                 $taxonomy_image_id = get_term_meta($taxonomy_id, 'showcase-taxonomy-image-id', true);
@@ -26,13 +26,20 @@ get_header(); ?>
                             ?>
                             <?php if ( $taxonomy_image_url) :?>
                             <header class="custom_tax_header" style="background-image: url('<?php echo $taxonomy_image_url ?>')">
+                                <div class="overlay-achive-page"></div>
+                                
                                 <h1 class="custom-tax-title"><?php  single_cat_title(''); ?></h1>
                                 
                             </header>
                             <?php endif;?>
                             <?php the_archive_description('<section class="archive-description">', '</section>'); ?>
                             <?php
-
+                            // If a parent Category 
+                            if( $wp_query->queried_object->parent == 0):
+                                
+                                echo Tecnibo_Portfolio::get_archive_subcat($wp_query->queried_object->term_id ) ;
+                                
+                            else:
                                 
                             ?>
                             
@@ -90,7 +97,7 @@ get_header(); ?>
                                 else:
                                     echo '<p>'.__( "Sorry, no products or projects  matched your criteria.", "tecnibo") .'</p>';
                             endif; // has posts 
-                            
+                            endif; // End Parent Cat
                             ?>
                             
                             
