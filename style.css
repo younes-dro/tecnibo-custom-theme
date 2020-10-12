@@ -42,11 +42,20 @@ p{
     padding-left: 10px;
     padding-right: 10px; 
 }
-
+/* Langauge Switcher */
+trp-ls-shortcode-current-language{
+    background-color: #f5f5f5;
+}
 /* Header */
+
+.mobile-menu .hamburger-inner, .mobile-menu .hamburger-inner::before, .mobile-menu .hamburger-inner::after{
+    background-color: #867e79!important; 
+}
+
 #site-header.transparent-header{
     height: 80px!important;
     margin-bottom: 0px!important;
+    z-index:1!important;
 }
 .page-header{
     padding: 0px !important;
