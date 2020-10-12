@@ -60,8 +60,8 @@ get_header(); ?>
                                         ),
                                     );
                                     if ( Tecnibo_Portfolio::category_has_product_project($args)){
-                                        echo '<div class="divider"><hr class="flush"></div>';
-                                        echo '<section class="tecnibo-row">';
+                                        
+                                        echo '<section style="max-width:90%" class="tecnibo-row">';
                                         echo '<h2 class="related_products_projects"><span>' . __('Products','tecnibo') . '</span></h2>';
                                         echo Tecnibo_Portfolio::get_grid_products_projects( $args );
                                         echo '</section>';
@@ -83,8 +83,7 @@ get_header(); ?>
                                         ),
                                     );      
                                     if ( Tecnibo_Portfolio::category_has_product_project($args)){
-                                        echo '<div class="divider"><hr class="flush"></div>';
-                                        echo '<section class="tecnibo-row">';
+                                        echo '<section style="max-width:90%" class="tecnibo-row">';
                                         echo '<h2 class="related_products_projects"><span>' . __('Projects','tecnibo') . '</span></h2>';
                                         echo Tecnibo_Portfolio::get_grid_products_projects( $args );
                                         echo '</section>';
