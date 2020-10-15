@@ -35,50 +35,6 @@ Version: 1.0
 # Typography
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-# Menus Navigation ( Main Menu , Mobile Menu, Footer Menu )
---------------------------------------------------------------*/
-/***************** Main Menu **********************************************/
-.sf-menu ul.sub-menu {
-  padding: 20px 10px;
-}
-
-.navigation > ul > li > ul.megamenu.sub-menu > li {
-  border-left-width: 0px;
-}
-
-#site-navigation-wrap nav#site-navigation ul#menu-main-menu li.menu-item a {
-  /*border:1px solid #f00;*/
-  font-size: 16px;
-  font-family: "Oswald", sans-serif;
-  font-weight: 300 !important;
-  color: #554b4a;
-}
-
-#site-navigation-wrap nav#site-navigation ul#menu-main-menu li.menu-item a:hover {
-  color: #e80100;
-}
-
-#site-navigation-wrap nav#site-navigation ul#menu-main-menu li.menu-item ul.sub-menu a {
-  /*border: 1px solid #f0f;*/
-}
-
-#site-navigation-wrap nav#site-navigation ul#menu-main-menu li.menu-item ul.sub-menu a:hover {
-  /*color: #e80100;*/
-}
-
-.dropdown-menu .sub-menu {
-  border-color: #13aff0 !important;
-}
-
-.sf-menu ul.sub-menu {
-  top: 109% !important;
-}
-
-.navigation .megamenu li ul.sub-menu {
-  border: none !important;
-}
-
-/*--------------------------------------------------------------
 # Site
 --------------------------------------------------------------*/
 body {
@@ -178,6 +134,50 @@ header.page-header .site-breadcrumbs a {
   /*border: 1px solid #f00;*/
   /*left: 0;*/
   /*top: 12px;*/
+}
+
+/*--------------------------------------------------------------
+# Menus Navigation ( Main Menu , Mobile Menu, Footer Menu )
+--------------------------------------------------------------*/
+/***************** Main Menu **********************************************/
+.sf-menu ul.sub-menu {
+  padding: 20px 10px;
+}
+
+.navigation > ul > li > ul.megamenu.sub-menu > li {
+  border-left-width: 0px;
+}
+
+#site-navigation-wrap nav#site-navigation ul#menu-main-menu li.menu-item a {
+  /*border:1px solid #f00;*/
+  font-size: 16px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300 !important;
+  color: #554b4a;
+}
+
+#site-navigation-wrap nav#site-navigation ul#menu-main-menu li.menu-item a:hover {
+  color: #e80100;
+}
+
+#site-navigation-wrap nav#site-navigation ul#menu-main-menu li.menu-item ul.sub-menu a {
+  /*border: 1px solid #f0f;*/
+}
+
+#site-navigation-wrap nav#site-navigation ul#menu-main-menu li.menu-item ul.sub-menu a:hover {
+  /*color: #e80100;*/
+}
+
+.dropdown-menu .sub-menu {
+  border-color: #13aff0 !important;
+}
+
+.sf-menu ul.sub-menu {
+  top: 109% !important;
+}
+
+.navigation .megamenu li ul.sub-menu {
+  border: none !important;
 }
 
 /*# sourceMappingURL=style.css.map */
