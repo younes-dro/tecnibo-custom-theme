@@ -1,0 +1,33 @@
+/***************** Main Menu **********************************************/
+.sf-menu ul.sub-menu{
+    padding: 20px 10px;
+}
+.navigation>ul>li>ul.megamenu.sub-menu>li{
+    border-left-width: 0px;
+
+}
+#site-navigation-wrap nav#site-navigation ul#menu-main-menu li.menu-item a{
+    /*border:1px solid #f00;*/
+    font-size: 16px;
+    font-family: $font_mainmenu;
+    font-weight: 300!important;
+    color: $color__text-menu-item-a;
+}
+#site-navigation-wrap nav#site-navigation ul#menu-main-menu li.menu-item a:hover{
+    color:$color__text-menu-item-a-hover;
+}
+#site-navigation-wrap nav#site-navigation ul#menu-main-menu li.menu-item ul.sub-menu a{
+    /*border: 1px solid #f0f;*/
+}
+#site-navigation-wrap nav#site-navigation ul#menu-main-menu li.menu-item ul.sub-menu a:hover{
+    /*color: #e80100;*/
+}
+.dropdown-menu .sub-menu {
+    border-color: $color__border-submenu!important;
+}
+.sf-menu ul.sub-menu{
+    top:109%!important;
+}
+.navigation .megamenu li ul.sub-menu{
+    border:none!important;
+}

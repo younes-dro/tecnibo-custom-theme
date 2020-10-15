@@ -1,0 +1,89 @@
+body{
+    position: relative;
+    padding: 0;
+    background: $color__background-body;
+    color: #554b4a;
+    font-family: $font__main;
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font_heading!important;
+    color: $color__text-heading;    
+    font-weight: 400;
+
+}
+p{
+    font-family: $font__main;
+    color:$color__text-paragraph ;
+    font-size: 1.5em;    
+}
+/* Parent stylesheet should be loaded from functions.php not using @import */
+#topbar-template{
+    /*border: 1px solid;*/
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px; 
+}
+
+/* Langauge Switcher */
+trp-ls-shortcode-current-language{
+    background-color: $color__background-language-switcher;
+}
+/* Header */
+#site-header.transparent-header{
+    height: 80px!important;
+    margin-bottom: 0px!important;
+    z-index:1!important;
+}
+.page-header{
+    padding: 0px !important;
+    background-color: $color__background-page-header!important;
+    /* border: 1px solid; */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    min-height: 1px;  
+}
+.sticky-header{
+    position: fixed!important;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    animation: slide-down 0.7s;
+    box-shadow: 1px 1px 4px;    
+}
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    } 
+    100% {
+        opacity: 0.9;
+        transform: translateY(0);
+    } 
+}
+/* Custom Header for pages  */
+#site-header.transparent-header{
+    position: relative!important;
+    background-color:$color__background-page-header!important;
+}
+/* breadcrumbs */
+header.page-header nav.site-breadcrumbs{
+    /*border: 1px solid #f00;*/
+    left: 0;
+    top: 22px;
+}
+header.page-header .site-breadcrumbs a{
+    color: $color__text-breadcrumbs!important;
+    /*border: 1px solid #f00;*/
+    /*left: 0;*/
+    /*top: 12px;*/
+}

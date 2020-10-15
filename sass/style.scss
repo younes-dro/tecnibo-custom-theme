@@ -1,0 +1,27 @@
+/*!
+Theme Name: Tecnibo
+Theme URI: https://github.com/younes-dro/tecnibo-theme
+Description: Tecnibo theme.
+Author: Younes DRO
+Author URI: https://github.com/younes-dro
+Template: oceanwp
+Version: 1.0
+*/
+
+/*--------------------------------------------------------------
+# Variables (Colors)
+--------------------------------------------------------------*/
+@import "variables-site/variables-site";
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "typography/typography";
+
+/*--------------------------------------------------------------
+# Menus Navigation ( Main Menu , Mobile Menu, Footer Menu )
+--------------------------------------------------------------*/
+@import "navigation/navigation";
+/*--------------------------------------------------------------
+# Site
+--------------------------------------------------------------*/
+@import "site/site";
