@@ -1,0 +1,264 @@
+
+body.wp_mm_enable{
+    overflow: hidden;
+}
+.body_overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hsla(0, 0%, 0%, 0.9);
+    z-index: 998;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+
+}
+.body_overlay.enabled{
+    display: block;
+    opacity: 1;
+}
+
+.wp_mm_wrapper.active{
+    z-index: 999;
+    opacity: 1;
+    right: 0;
+    ul.main-menu{
+        display: block;
+    }
+}
+.wp_mm_wrapper{
+    height: calc(100vh - 80px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: fixed;
+    right: -300px;
+    bottom: 0;
+    z-index: -9;
+    width: 300px;
+    opacity: 0;
+    background: hsla(0, 0%, 0%, 1);
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    transition: right 0.5s;
+    /*box-sh*/       
+    ul.main-menu{
+        position: relative;
+        display: none;
+        margin:  0 0 0 2px;
+        a:not(.forward){
+            display: block;
+            color: #fff;
+            padding: 20px 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 300;
+            font-family: sans-serif            
+        }
+        > li > a{
+            color: #fdb84e
+        }
+        li.back a{
+            font-size: 13px;
+            width: 50%;
+            margin: 0 auto;
+            font-family: sans-serif; 
+        }
+        .sub-menu , .children{
+            background-color: #000000;
+            height: 100%;
+            position: absolute;
+            right: -100%;
+            top: 0;
+            transition: all 0.5s ease 0s;
+            width: 100%;
+            z-index: 999;            
+        }
+        li{
+            list-style-type: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0);
+            border-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #7ac1b7 20%, #7ac1b7 50%, #7ac1b7 80%, rgba(0, 0, 0, 0) 100%) 0 0 1 0;
+            color: #ffffff;
+            height: 60px;            
+        }
+        li.active>.sub-menu ,
+        li.active>.children {
+            right: 0;
+        }
+        li.page_item_has_children, 
+        li.menu-item-has-children{
+            >a{
+                width: 50%
+            }
+        }
+        li.page_item_has_children,
+        li.menu-item-has-children{
+            a.forward{
+                font-size: 24px;
+                cursor: pointer;
+                border: 1px solid;
+                width: 50px;
+                /* line-height: 1rem; */
+                text-align: center;
+                color: #fff;               
+            }
+        }
+        ul.sub-menu.megamenu div{
+            /*display: none;*/
+        }
+        div.tecnibo-widget-submenu-1col{
+            padding-left: 22px;
+            border: none;
+        }
+        h2.title-cat{
+            color: #fff;
+            font-size: 12px;
+        }
+        span.text-wrap > span.nav-arrow{
+            display: none;
+        }
+        div.tecnibo-widget-submenu-1col{
+            h1{
+                font-size: 15px;
+                font-weight: 400;
+                color: #f2f3f3;
+            }
+            p{
+                font-size: 12px;
+                color: #f2f3f3;
+            }
+            a{
+                padding: 10px 5px;
+                text-align: center;
+                border: none;
+            }
+        }
+    }/* ul.main-menu*/
+    .current_page_item > a,
+    .current-menu-item > a,
+    .current_page_item > a:hover,
+        .current-menu-item > a:hover {
+        color: #313131;
+        border-left: 2px solid  #7ac1b7;
+    }    
+
+}
+a.forward{
+    float: right;
+    margin: 20px 10px 0 0;
+}
+span.left{
+    float: left;
+    margin: 20px 0 0 20px;
+}
+#toggle-menu-container{
+    position: absolute;
+    z-index: 99999;
+    right: 0px;
+    top: 20px;
+    height: 50px;
+}
+#toggle-menu{
+    cursor: pointer;
+    /*float: right;*/
+    border:none!important;
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+    z-index: 9999;
+    background-color: #fff;
+    border-radius:0;
+    span{
+        background-color: #919191;
+        border-radius: 5px;
+        display: block;
+        height: 1px;
+        left: 0;
+        width: 45px;
+        opacity: 1;
+        position: absolute;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: all 0.25s ease-in-out 0s;
+        -moz-transition: all 0.25s ease-in-out 0s;
+        -o-transition: all 0.25s ease-in-out 0s;
+        transition: all 0.25s ease-in-out 0s;        
+    }
+    span:nth-child(1){
+        top: 5px;
+    }
+    span:nth-child(2),
+        span:nth-child(3){
+        top: 20px;
+    }
+    span:nth-child(4) {
+        top: 35px;
+    }
+}
+
+#toggle-menu.open{ 
+    span:nth-child(1) {
+        left: 50%;
+        top: 18px;
+        width: 0;
+    }
+    span:nth-child(2){
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        transform: rotate(45deg);        
+    }
+    span:nth-child(3){
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        transform: rotate(-45deg);        
+    }
+    span:nth-child(4){
+        left: 50%;
+        top: 18px;
+        width: 0;        
+    }
+}
+
+#toggle-menu-container{
+    display: none;
+    @media screen and (min-width:959px){
+        display: none;
+    }
+}
+@media only screen and (max-width: 959px){
+    body.default-breakpoint .oceanwp-mobile-menu-icon {
+        display: none!important;
+    }
+}
+body.wp_mm_enable{
+    @media screen and (min-width:992px){
+        /*overflow: visible;*/
+    }
+}
+div.tecnibo-language-switcher.trp-language-switcher-container{
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    @media screen and (min-width:959px){
+        display:none;
+    }
+}
+div#wrap #top-bar-wrap{
+    display: none;
+    @media screen and (min-width:959px){
+        display: block;
+    }
+}
