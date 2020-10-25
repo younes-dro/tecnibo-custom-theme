@@ -84,7 +84,7 @@ trp-ls-shortcode-current-language {
 #site-header.transparent-header {
   height: 80px !important;
   margin-bottom: 0px !important;
-  z-index: 12 !important;
+  z-index: 999 !important;
 }
 
 .page-header {
@@ -140,7 +140,7 @@ header.page-header .site-breadcrumbs a {
 # Menus Navigation ( Main Menu , Mobile Menu, Footer Menu )
 --------------------------------------------------------------*/
 /***************** Mobile Menu**********************************************/
-body.wp_mm_enable {
+html.wp_mm_enable, body.wp_mm_enable {
   overflow: hidden;
 }
 
@@ -372,7 +372,7 @@ span.left {
 }
 
 #toggle-menu-container {
-  display: none;
+  /*display: none;*/
 }
 @media screen and (min-width: 959px) {
   #toggle-menu-container {
@@ -385,9 +385,9 @@ span.left {
     display: none !important;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 960px) {
   body.wp_mm_enable {
-    /*overflow: visible;*/
+    overflow: visible;
   }
 }
 

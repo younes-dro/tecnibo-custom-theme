@@ -1,5 +1,5 @@
 
-body.wp_mm_enable{
+html.wp_mm_enable, body.wp_mm_enable{
     overflow: hidden;
 }
 .body_overlay{
@@ -233,7 +233,7 @@ span.left{
 }
 
 #toggle-menu-container{
-    display: none;
+    /*display: none;*/
     @media screen and (min-width:959px){
         display: none;
     }
@@ -244,8 +244,8 @@ span.left{
     }
 }
 body.wp_mm_enable{
-    @media screen and (min-width:992px){
-        /*overflow: visible;*/
+    @media screen and (min-width:960px){
+        overflow: visible;
     }
 }
 div.tecnibo-language-switcher.trp-language-switcher-container{

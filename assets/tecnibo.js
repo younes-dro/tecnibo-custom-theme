@@ -10,7 +10,7 @@
          * 
          */
         var droPizzaMainMenu = $('nav.main-navigation ul.main-menu').clone(true, true);
-        console.log(droPizzaMainMenu);
+//        console.log(droPizzaMainMenu);
 
         $(droPizzaMainMenu).droSlidingMenu();
 

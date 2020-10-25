@@ -53,12 +53,7 @@
             });
         },
         createRightNavButton = function () {
-            
-            droMenu.wrapperControl.find("li:has(ul.megamenu-cat)").each(function(){
-                var rightNavButton = $("<a/>", {"class": "fa fa-chevron-right forward"});
-                rightNavButton.prependTo($(this));                
-            });
-            
+                        
             droMenu.wrapperControl.find("li.page_item_has_children , li.menu-item-has-children ").each(function () {
                 var rightNavButton = $("<a/>", {"class": "fa fa-chevron-right forward"});
                 rightNavButton.prependTo($(this));
@@ -103,7 +98,7 @@
             * to back to the home item add : .find("li.active").removeClass("active") 
             */
             $("." + droMenu.settings.wrapperClass).toggleClass("active");
-            $("body").toggleClass("wp_mm_enable");
+            $("html, body").toggleClass("wp_mm_enable");
         },
         showSubMenu = function (e) {
             e.preventDefault();
