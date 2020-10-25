@@ -49,3 +49,30 @@ if ( ! function_exists( 'tecnibo_setup' ) ) :
 endif;
 
 add_action('after_setup_theme', 'tecnibo_setup');
+
+add_action( 'wp_footer', function () {
+if ( is_page ('2783')) {
+?>
+
+<script> 
+window.onload = function() {
+    var anchors = document.getElementsByClassName('page-numbers');
+    var current = location.href.substring(0,location.href.length-1);
+    if (current.includes('page')) {
+        current = current.substring(0,current.lastIndexOf('/')); 
+        current = current.substring(0,current.lastIndexOf('/')); 
+    } for(let i = 0; i < anchors.length; i++) {
+        if (anchors[i].tagName == 'A') {
+            var link = anchors[i].href; var page = link;
+            if (link.slice(-1) == '/') {
+                page = link.substring(0,link.length-1);
+            } 
+            page = page.substring(page.lastIndexOf('/')+1);
+            if (isNaN(page)) {
+                page = '' 
+            } else {
+                page = '/page/' + page; 
+            
+                } if (!link.includes('page')) { anchors[i].href = current + page; } } } };
+</script>
+<?php } } );
