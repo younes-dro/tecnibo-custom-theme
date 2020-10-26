@@ -55,7 +55,7 @@
         createRightNavButton = function () {
                         
             droMenu.wrapperControl.find("li.page_item_has_children , li.menu-item-has-children ").each(function () {
-                var rightNavButton = $("<a/>", {"class": "fa fa-chevron-right forward"});
+                var rightNavButton = $("<span/>", {"class": "ion-ios-arrow-forward forward"});
                 rightNavButton.prependTo($(this));
             });
         },
@@ -64,7 +64,7 @@
                 var dis         = $(this),
                     disPar      = dis.closest("li"),
                     disA        = disPar.find(">a"),
-                    disIconBack = $("<span/>", {"class": "fa fa-chevron-left left"}),
+                    disIconBack = $("<span/>", {"class": "ion-ios-arrow-left left"}),
                     disBack     = $("<li/>", {"class": "backDiv",
                                       "html": "<a href='" + disA.attr('href') + "'>" + disA.text() + "</a>"});
                 disIconBack.prependTo(disBack);
@@ -76,7 +76,7 @@
                 var dis         = $(this),
                     disPar      = dis.closest("li"),
                     disA        = disPar.find(">a"),
-                    disIconBack = $("<span/>", {"class": "fa fa-chevron-left left"}),
+                    disIconBack = $("<span/>", {"class": "ion-ios-arrow-left left"}),
                     disBack     = $("<li/>", {"class": "back",
                                       "html": "<a href='" + disA.attr('href') + "'>" + disA.text() + "</a>"});
                 disIconBack.prependTo(disBack);
@@ -119,7 +119,7 @@
         openCurrentPage();
         droMenu.toggleControl.click(toggleMobileMenu);
         droMenu.bodyOverlay.click(toggleMobileMenu);
-        droMenu.wrapperControl.find("li.page_item_has_children, li.menu-item-has-children > a.forward").click(showSubMenu);
+        droMenu.wrapperControl.find("li.page_item_has_children, li.menu-item-has-children > span.forward").click(showSubMenu);
         droMenu.wrapperControl.find("li.backDiv > span").click(goBackDiv);
         droMenu.wrapperControl.find("li.back > span").click(goBack);
     };

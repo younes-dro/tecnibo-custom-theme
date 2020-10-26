@@ -26,6 +26,7 @@ function oceanwp_child_enqueue_parent_style() {
 	// Load the stylesheet
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( 'oceanwp-style' ), $version );
         wp_enqueue_style( 'tecnibo-font-portfolio' , 'https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald:wght@300&display=swap', false);
+        wp_enqueue_style( 'ionicons', get_stylesheet_directory_uri().'/assets/ionicons/css/ionicons.css',array(), $version );        
         wp_enqueue_script( 'tecnibo-js' ,get_stylesheet_directory_uri() . '/assets/tecnibo.js', array ( 'jquery' ), $version , false);
         wp_enqueue_script( 'dro-sliding-menu' ,get_stylesheet_directory_uri() . '/assets/dro-sliding-menu.js', array ( 'jquery' , 'tecnibo-js' ), $version , false);
 	

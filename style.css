@@ -144,6 +144,12 @@ html.wp_mm_enable, body.wp_mm_enable {
   overflow: hidden;
 }
 
+@media screen and (min-width: 960px) {
+  body.wp_mm_enable {
+    overflow: visible;
+  }
+}
+
 .body_overlay {
   position: fixed;
   top: 0;
@@ -172,16 +178,17 @@ html.wp_mm_enable, body.wp_mm_enable {
 }
 
 .wp_mm_wrapper {
-  height: calc(100vh - 80px);
+  /*height: calc(100vh - 80px);*/
   overflow-y: scroll;
   overflow-x: hidden;
   position: fixed;
   right: -300px;
+  top: 80px;
   bottom: 0;
   z-index: -9;
   width: 300px;
   opacity: 0;
-  background: black;
+  background: #0d0d0d;
   -webkit-transition: opacity 0.2s;
   -moz-transition: opacity 0.2s;
   transition: right 0.5s;
@@ -209,26 +216,38 @@ html.wp_mm_enable, body.wp_mm_enable {
 }
 .wp_mm_wrapper ul.main-menu li.back a {
   font-size: 13px;
-  width: 50%;
+  width: 90%;
   margin: 0 auto;
   font-family: sans-serif;
+  padding-top: 32px;
+}
+.wp_mm_wrapper ul.main-menu li.backDiv > a {
+  /*background-color: #919191;*/
+}
+.wp_mm_wrapper ul.main-menu li.backDiv > a :hover {
+  background-color: #000 !important;
 }
 .wp_mm_wrapper ul.main-menu .sub-menu, .wp_mm_wrapper ul.main-menu .children {
-  background-color: #000000;
-  height: 100%;
+  background-color: #0d0d0d;
+  height: 200%;
   position: absolute;
   right: -100%;
   top: 0;
   transition: all 0.5s ease 0s;
   width: 100%;
   z-index: 999;
+  /* border: 1px solid; */
+  margin: 0 auto;
+  padding: 0 5px;
 }
 .wp_mm_wrapper ul.main-menu li {
   list-style-type: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0);
   border-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #7ac1b7 20%, #7ac1b7 50%, #7ac1b7 80%, rgba(0, 0, 0, 0) 100%) 0 0 1 0;
   color: #ffffff;
-  height: 60px;
+  height: 75px;
+  padding-top: 5px;
+  padding-right: 8px;
 }
 .wp_mm_wrapper ul.main-menu li.active > .sub-menu,
 .wp_mm_wrapper ul.main-menu li.active > .children {
@@ -238,15 +257,27 @@ html.wp_mm_enable, body.wp_mm_enable {
 .wp_mm_wrapper ul.main-menu li.menu-item-has-children > a {
   width: 50%;
 }
-.wp_mm_wrapper ul.main-menu li.page_item_has_children a.forward,
-.wp_mm_wrapper ul.main-menu li.menu-item-has-children a.forward {
+.wp_mm_wrapper ul.main-menu li.page_item_has_children span.forward, .wp_mm_wrapper ul.main-menu li.page_item_has_children span.left,
+.wp_mm_wrapper ul.main-menu li.menu-item-has-children span.forward,
+.wp_mm_wrapper ul.main-menu li.menu-item-has-children span.left {
   font-size: 24px;
   cursor: pointer;
   border: 1px solid;
-  width: 50px;
-  /* line-height: 1rem; */
+  width: 45px;
+  line-height: 45px;
   text-align: center;
   color: #fff;
+  height: 45px;
+}
+.wp_mm_wrapper ul.main-menu li.page_item_has_children span.forward,
+.wp_mm_wrapper ul.main-menu li.menu-item-has-children span.forward {
+  float: right;
+  margin: 20px 10px 0 0;
+}
+.wp_mm_wrapper ul.main-menu li.page_item_has_children span.left,
+.wp_mm_wrapper ul.main-menu li.menu-item-has-children span.left {
+  float: left;
+  margin: 20px 10px 0px 20px;
 }
 .wp_mm_wrapper ul.main-menu ul.sub-menu.megamenu div {
   /*display: none;*/
@@ -271,11 +302,6 @@ html.wp_mm_enable, body.wp_mm_enable {
   font-size: 12px;
   color: #f2f3f3;
 }
-.wp_mm_wrapper ul.main-menu div.tecnibo-widget-submenu-1col a {
-  padding: 10px 5px;
-  text-align: center;
-  border: none;
-}
 .wp_mm_wrapper .current_page_item > a,
 .wp_mm_wrapper .current-menu-item > a,
 .wp_mm_wrapper .current_page_item > a:hover,
@@ -284,22 +310,17 @@ html.wp_mm_enable, body.wp_mm_enable {
   border-left: 2px solid #7ac1b7;
 }
 
-a.forward {
-  float: right;
-  margin: 20px 10px 0 0;
-}
-
-span.left {
-  float: left;
-  margin: 20px 0 0 20px;
-}
-
 #toggle-menu-container {
   position: absolute;
   z-index: 99999;
   right: 0px;
   top: 20px;
   height: 50px;
+}
+@media screen and (min-width: 959px) {
+  #toggle-menu-container {
+    display: none;
+  }
 }
 
 #toggle-menu {
@@ -371,26 +392,11 @@ span.left {
   width: 0;
 }
 
-#toggle-menu-container {
-  /*display: none;*/
-}
-@media screen and (min-width: 959px) {
-  #toggle-menu-container {
-    display: none;
-  }
-}
-
 @media only screen and (max-width: 959px) {
   body.default-breakpoint .oceanwp-mobile-menu-icon {
     display: none !important;
   }
 }
-@media screen and (min-width: 960px) {
-  body.wp_mm_enable {
-    overflow: visible;
-  }
-}
-
 div.tecnibo-language-switcher.trp-language-switcher-container {
   position: absolute;
   left: 50%;

@@ -2,6 +2,11 @@
 html.wp_mm_enable, body.wp_mm_enable{
     overflow: hidden;
 }
+body.wp_mm_enable{
+    @media screen and (min-width:960px){
+        overflow: visible;
+    }
+}
 .body_overlay{
     position: fixed;
     top: 0;
@@ -29,16 +34,17 @@ html.wp_mm_enable, body.wp_mm_enable{
     }
 }
 .wp_mm_wrapper{
-    height: calc(100vh - 80px);
+    /*height: calc(100vh - 80px);*/
     overflow-y: scroll;
     overflow-x: hidden;
     position: fixed;
     right: -300px;
+    top: 80px;
     bottom: 0;
     z-index: -9;
     width: 300px;
     opacity: 0;
-    background: hsla(0, 0%, 0%, 1);
+    background: hsl(0deg 0% 5%);
     -webkit-transition: opacity 0.2s;
     -moz-transition: opacity 0.2s;
     transition: right 0.5s;
@@ -63,26 +69,38 @@ html.wp_mm_enable, body.wp_mm_enable{
         }
         li.back a{
             font-size: 13px;
-            width: 50%;
+            width: 90%;
             margin: 0 auto;
             font-family: sans-serif; 
+            padding-top: 32px;
+        }
+        li.backDiv > a {
+            /*background-color: #919191;*/
+            :hover{
+                background-color:#000!important ;
+            }
         }
         .sub-menu , .children{
-            background-color: #000000;
-            height: 100%;
+            background-color: hsl(0deg 0% 5%);
+            height: 200%;
             position: absolute;
             right: -100%;
             top: 0;
             transition: all 0.5s ease 0s;
             width: 100%;
-            z-index: 999;            
+            z-index: 999;
+            /* border: 1px solid; */
+            margin: 0 auto;
+            padding: 0 5px;          
         }
         li{
             list-style-type: none;
             border-bottom: 1px solid rgba(0, 0, 0, 0);
             border-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #7ac1b7 20%, #7ac1b7 50%, #7ac1b7 80%, rgba(0, 0, 0, 0) 100%) 0 0 1 0;
             color: #ffffff;
-            height: 60px;            
+            height: 75px;
+            padding-top: 5px;
+            padding-right: 8px;           
         }
         li.active>.sub-menu ,
         li.active>.children {
@@ -96,15 +114,24 @@ html.wp_mm_enable, body.wp_mm_enable{
         }
         li.page_item_has_children,
         li.menu-item-has-children{
-            a.forward{
+            span.forward , span.left{
                 font-size: 24px;
                 cursor: pointer;
                 border: 1px solid;
-                width: 50px;
-                /* line-height: 1rem; */
+                width: 45px;
+                line-height: 45px;
                 text-align: center;
-                color: #fff;               
+                color: #fff;
+                height: 45px;              
             }
+            span.forward{
+                float: right;
+                margin: 20px 10px 0 0;
+            }
+            span.left{
+                float: left;
+                margin: 20px 10px 0px 20px;
+            }            
         }
         ul.sub-menu.megamenu div{
             /*display: none;*/
@@ -131,9 +158,6 @@ html.wp_mm_enable, body.wp_mm_enable{
                 color: #f2f3f3;
             }
             a{
-                padding: 10px 5px;
-                text-align: center;
-                border: none;
             }
         }
     }/* ul.main-menu*/
@@ -146,20 +170,16 @@ html.wp_mm_enable, body.wp_mm_enable{
     }    
 
 }
-a.forward{
-    float: right;
-    margin: 20px 10px 0 0;
-}
-span.left{
-    float: left;
-    margin: 20px 0 0 20px;
-}
+
 #toggle-menu-container{
     position: absolute;
     z-index: 99999;
     right: 0px;
     top: 20px;
     height: 50px;
+    @media screen and (min-width:959px){
+        display: none;
+    }    
 }
 #toggle-menu{
     cursor: pointer;
@@ -232,22 +252,12 @@ span.left{
     }
 }
 
-#toggle-menu-container{
-    /*display: none;*/
-    @media screen and (min-width:959px){
-        display: none;
-    }
-}
 @media only screen and (max-width: 959px){
     body.default-breakpoint .oceanwp-mobile-menu-icon {
         display: none!important;
     }
 }
-body.wp_mm_enable{
-    @media screen and (min-width:960px){
-        overflow: visible;
-    }
-}
+
 div.tecnibo-language-switcher.trp-language-switcher-container{
     position: absolute;
     left: 50%;
