@@ -13,7 +13,7 @@ body.wp_mm_enable{
     left: 0;
     width: 100%;
     height: 100%;
-    background: hsla(0, 0%, 0%, 0.9);
+    background: #0000004d;
     z-index: 998;
     display: none;
     opacity: 0;
@@ -44,7 +44,7 @@ body.wp_mm_enable{
     z-index: -9;
     width: 300px;
     opacity: 0;
-    background: hsl(0deg 0% 5%);
+    background-image: linear-gradient(to top left, #454800, #000);
     -webkit-transition: opacity 0.2s;
     -moz-transition: opacity 0.2s;
     transition: right 0.5s;
@@ -58,14 +58,12 @@ body.wp_mm_enable{
             color: #fff;
             padding: 20px 15px;
             letter-spacing: 1px;
-            text-transform: uppercase;
             text-decoration: none;
-            font-size: 12px;
-            font-weight: 300;
-            font-family: sans-serif            
+            font-size: 15px;
+            font-weight: initial;           
         }
         > li > a{
-            color: #fdb84e
+            color: #fff;
         }
         li.back a{
             font-size: 13px;
@@ -75,14 +73,14 @@ body.wp_mm_enable{
             padding-top: 32px;
         }
         li.backDiv > a {
-            /*background-color: #919191;*/
+            border:none;
             :hover{
                 background-color:#000!important ;
             }
         }
         .sub-menu , .children{
-            background-color: hsl(0deg 0% 5%);
-            height: 200%;
+            background-image: linear-gradient(to top left , #454800,#000);
+            min-height: 100%;
             position: absolute;
             right: -100%;
             top: 0;
@@ -96,7 +94,7 @@ body.wp_mm_enable{
         li{
             list-style-type: none;
             border-bottom: 1px solid rgba(0, 0, 0, 0);
-            border-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #7ac1b7 20%, #7ac1b7 50%, #7ac1b7 80%, rgba(0, 0, 0, 0) 100%) 0 0 1 0;
+            border-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #aab203 20%, #aab203 50%, #aab203 80%, rgba(0, 0, 0, 0) 100%) 0 0 1 0;
             color: #ffffff;
             height: 75px;
             padding-top: 5px;
@@ -142,22 +140,41 @@ body.wp_mm_enable{
         }
         h2.title-cat{
             color: #fff;
-            font-size: 12px;
+            font-size: 14px;
         }
         span.text-wrap > span.nav-arrow{
             display: none;
         }
-        div.tecnibo-widget-submenu-1col{
+        div.tecnibo-widget-submenu-1col , div.tecnibo-widget-submenu-3col{
             h1{
-                font-size: 15px;
-                font-weight: 400;
+                font-size: 20px;
+                font-weight: 500;
                 color: #f2f3f3;
+                line-height: 2.5rem;
+                margin: 20px auto;
+                letter-spacing: 4px;
             }
             p{
-                font-size: 12px;
+                font-size: 14px;
                 color: #f2f3f3;
+                letter-spacing: 2px;
             }
+            a.button-1col{
+                text-align: center;
+                width: 70%;
+                margin: 0 auto;
+                &:hover{
+                    background-color: #000;
+                    color: #fff;
+                    
+                }
+            }
+        }
+        div.tecnibo-widget-submenu-3col{
             a{
+                &:hover{
+                    background-color: transparent!important;
+                }
             }
         }
     }/* ul.main-menu*/
@@ -166,7 +183,7 @@ body.wp_mm_enable{
     .current_page_item > a:hover,
         .current-menu-item > a:hover {
         color: #313131;
-        border-left: 2px solid  #7ac1b7;
+        border-left: 2px solid  #aab203;
     }    
 
 }
@@ -270,5 +287,6 @@ div#wrap #top-bar-wrap{
     display: none;
     @media screen and (min-width:959px){
         display: block;
+        z-index: 9999;
     }
 }
