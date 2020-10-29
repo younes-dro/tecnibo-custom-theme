@@ -17,8 +17,8 @@
 
         $(droPizzaMainMenu).droSlidingMenu();
 
-//        var trp = $ ('div.trp-language-switcher-container').clone(true, true);
-//        trp.addClass('tecnibo-language-switcher').appendTo($('div#site-header-inner'));
+        var trp = $ ('div.elementor-location-footer div.trp-language-switcher-container');
+        trp.addClass('tecnibo-language-switcher').appendTo($('div#site-header-inner'));
 
         /* Stick navigation and scroll top on window scrolling  */
         var stickyNavTop = $('#transparent-header-wrap').offset().top;
