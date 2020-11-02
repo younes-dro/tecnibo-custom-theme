@@ -473,4 +473,21 @@ div#wrap #top-bar-wrap {
   border: none !important;
 }
 
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+.wp_mm_wrapper.active ul.main-menu form {
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px 5px;
+}
+.wp_mm_wrapper.active ul.main-menu form input[type=search] {
+  padding-left: 10px;
+}
+.wp_mm_wrapper.active ul.main-menu form button {
+  min-width: calc( 6.1 * 10px );
+  background-color: rgba(173, 169, 169, 0);
+  font-size: 15px;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -8,15 +8,25 @@
         /**
          * Aply Blur effect when the mobile menu is opened
          */
+        
         /**
          * Creating the mobile menu.
          * 
          */
-        var droPizzaMainMenu = $('nav.main-navigation ul.main-menu').clone(true, true);
-//        console.log(droPizzaMainMenu);
-
-        $(droPizzaMainMenu).droSlidingMenu();
-
+        // Main Menu 
+        var tecniboMainMenu = $('nav.main-navigation ul.main-menu').clone(true, true);
+        $(tecniboMainMenu).droSlidingMenu();
+        // Top Bar elements(Jobs and contact)
+        $('div#top-bar nav.elementor-nav-menu--main').find('li.menu-item').each(function(){
+            var tecniboTopMenu = $(this).clone(true, true);
+            $('div.wp_mm_wrapper ul.main-menu').append(tecniboTopMenu);
+        });
+        // Search Form
+       $('div#top-bar').find('form').each(function(){
+           var formSearch = $(this).clone(true,true);
+           $('div.wp_mm_wrapper ul.main-menu').append(formSearch);
+       });
+        
         var trp = $ ('div.elementor-location-footer div.trp-language-switcher-container');
         trp.addClass('tecnibo-language-switcher').appendTo($('div#site-header-inner'));
 
