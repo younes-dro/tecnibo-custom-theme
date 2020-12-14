@@ -38,7 +38,7 @@ get_header(); ?>
                                 rel="group" data-id="<?php the_ID()?>" 
                                 data-slug="<?php //?>">
                             <img alt="DOLCE" src="<?php echo $featured_img_url ?>">
-                            <span class="hover middleParent" style="line-height: 213px;">
+                            <span class="hover middleParent">
                                 <span class="bg"></span>
                                 <span class="middle">
                                     <span class="title"><?php the_title()?></span>
