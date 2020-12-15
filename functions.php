@@ -51,6 +51,11 @@ endif;
 
 add_action('after_setup_theme', 'tecnibo_setup');
 
+function tecnibo_meta_color(){
+    echo '<meta name="theme-color" content="#aab203">';
+}
+add_action( 'wp_head', 'tecnibo_meta_color' );
+
 /**
  * Display a custom taxonomy dropdown in admin
  * @author Mike Hemberger
