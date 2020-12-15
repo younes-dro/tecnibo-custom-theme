@@ -31,6 +31,28 @@ p{
     margin: 0 auto;
     padding-left: 10px;
     padding-right: 10px; 
+    button.elementor-search-form__submit{
+        border-radius: 0px;
+    }
+    input.elementor-search-form__input{
+        padding-left: 15px;
+        border-left: 1px solid;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        border-radius: 0px!important;
+        background-color: #fff;
+        
+    }
+    div.trp-ls-shortcode-current-language{
+        padding: 3px 0 9px 0px;
+    }
+    li.menu-item{
+        a{
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
 }
 
 /* Langauge Switcher */

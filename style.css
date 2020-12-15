@@ -74,6 +74,23 @@ p {
   padding-left: 10px;
   padding-right: 10px;
 }
+#topbar-template button.elementor-search-form__submit {
+  border-radius: 0px;
+}
+#topbar-template input.elementor-search-form__input {
+  padding-left: 15px;
+  border-left: 1px solid;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-radius: 0px !important;
+  background-color: #fff;
+}
+#topbar-template div.trp-ls-shortcode-current-language {
+  padding: 3px 0 9px 0px;
+}
+#topbar-template li.menu-item a:hover {
+  text-decoration: underline;
+}
 
 /* Langauge Switcher */
 trp-ls-shortcode-current-language {
