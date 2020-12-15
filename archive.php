@@ -37,7 +37,11 @@ get_header(); ?>
                             // If a parent Category 
                             if( $wp_query->queried_object->parent == 0):
                                 
-                                echo Tecnibo_Portfolio::get_archive_subcat($wp_query->queried_object->term_id ) ;
+                                echo Tecnibo_Portfolio::get_archive_subcat( $wp_query->queried_object->term_id ) ;
+                                // Produits
+                                echo  Tecnibo_Portfolio::get_archive_products_projetcs( 'tecnibo_product' , $wp_query->queried_object->term_id , '');
+                                // Projets
+                                echo  Tecnibo_Portfolio::get_archive_products_projetcs( 'tecnibo_project' , $taxonomy_id ,'' ); 
                                 
                             else:
                                 
