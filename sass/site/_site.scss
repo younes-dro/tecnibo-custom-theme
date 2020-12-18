@@ -41,7 +41,7 @@ p{
         border-bottom: 1px solid;
         border-radius: 0px!important;
         background-color: #fff;
-        
+
     }
     div.trp-ls-shortcode-current-language{
         padding: 3px 0 9px 0px;
@@ -102,10 +102,17 @@ header.page-header nav.site-breadcrumbs{
     /*border: 1px solid #f00;*/
     left: 0;
     top: 22px;
-}
-header.page-header .site-breadcrumbs a{
-    color: $color__text-breadcrumbs!important;
-    /*border: 1px solid #f00;*/
-    /*left: 0;*/
-    /*top: 12px;*/
+    height: auto;
+    @media screen and (min-width:576px){
+        height: 32px;    
+    }
+    span{
+        @media screen and (max-width:576px){
+            display: block;
+        }
+    }
+    a{
+        color: $color__text-breadcrumbs!important;
+
+    }    
 }

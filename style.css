@@ -144,13 +144,20 @@ header.page-header nav.site-breadcrumbs {
   /*border: 1px solid #f00;*/
   left: 0;
   top: 22px;
+  height: auto;
 }
-
-header.page-header .site-breadcrumbs a {
+@media screen and (min-width: 576px) {
+  header.page-header nav.site-breadcrumbs {
+    height: 32px;
+  }
+}
+@media screen and (max-width: 576px) {
+  header.page-header nav.site-breadcrumbs span {
+    display: block;
+  }
+}
+header.page-header nav.site-breadcrumbs a {
   color: #867e79 !important;
-  /*border: 1px solid #f00;*/
-  /*left: 0;*/
-  /*top: 12px;*/
 }
 
 /*--------------------------------------------------------------
@@ -468,6 +475,10 @@ div#wrap #top-bar-wrap {
 
 #site-navigation-wrap nav#site-navigation ul#menu-main-menu li.menu-item a:hover {
   color: #e80100;
+}
+
+#site-navigation-wrap nav#site-navigation .dropdown-menu ul li a.menu-link {
+  text-transform: none;
 }
 
 #site-navigation-wrap nav#site-navigation ul#menu-main-menu li.menu-item ul.sub-menu a {

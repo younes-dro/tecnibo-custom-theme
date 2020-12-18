@@ -18,6 +18,10 @@
 #site-navigation-wrap nav#site-navigation ul#menu-main-menu li.menu-item a:hover{
     color:$color__text-menu-item-a-hover;
 }
+#site-navigation-wrap nav#site-navigation .dropdown-menu ul li a.menu-link {
+    text-transform: lowercase;
+}
+
 #site-navigation-wrap nav#site-navigation ul#menu-main-menu li.menu-item ul.sub-menu a{
     /*border: 1px solid #f0f;*/
 }
