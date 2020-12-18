@@ -66,7 +66,7 @@ get_header(); ?>
                                     if ( Tecnibo_Portfolio::category_has_product_project($args)){
                                         
                                         echo '<section style="max-width:90%" class="tecnibo-row">';
-                                        echo '<h2 class="related_products_projects"><span>' . __('Products','tecnibo') . '</span></h2>';
+                                        echo '<h2 class="related_products_projects"><span>' . __('Produits','tecnibo') . '</span></h2>';
                                         echo Tecnibo_Portfolio::get_grid_products_projects( $args );
                                         echo '</section>';
                                     }
@@ -88,7 +88,7 @@ get_header(); ?>
                                     );      
                                     if ( Tecnibo_Portfolio::category_has_product_project($args)){
                                         echo '<section style="max-width:90%" class="tecnibo-row">';
-                                        echo '<h2 class="related_products_projects"><span>' . __('Projects','tecnibo') . '</span></h2>';
+                                        echo '<h2 class="related_products_projects"><span>' . __('Projets','tecnibo') . '</span></h2>';
                                         echo Tecnibo_Portfolio::get_grid_products_projects( $args );
                                         echo '</section>';
                                     }
@@ -98,7 +98,9 @@ get_header(); ?>
                                     ?>
                             <?php 
                                 else:
+                                    echo '<section style="max-width:90%" class="tecnibo-row">';
                                     echo '<p>'.__( "Sorry, no products or projects  matched your criteria.", "tecnibo") .'</p>';
+                                    echo '</section>';
                             endif; // has posts 
                             endif; // End Parent Cat
                             ?>
