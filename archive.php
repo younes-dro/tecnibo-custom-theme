@@ -39,9 +39,12 @@ get_header(); ?>
                                 
                                 echo Tecnibo_Portfolio::get_archive_subcat( $wp_query->queried_object->term_id ) ;
                                 // Produits
-                                echo  Tecnibo_Portfolio::get_archive_products_projetcs( 'tecnibo_product' , $wp_query->queried_object->term_id , '');
+//                            echo '<pre>';
+//                            var_dump($wp_query->queried_object);
+//                            echo '</pre>';
+                                echo  Tecnibo_Portfolio::get_archive_products_projetcs( 'tecnibo_product' , $wp_query->queried_object->term_id , $wp_query->queried_object->name);
                                 // Projets
-                                echo  Tecnibo_Portfolio::get_archive_products_projetcs( 'tecnibo_project' , $taxonomy_id ,'' ); 
+                                echo  Tecnibo_Portfolio::get_archive_products_projetcs( 'tecnibo_project' , $taxonomy_id , $wp_query->queried_object->name ); 
                                 
                             else:
                                 
