@@ -167,6 +167,11 @@ header.page-header nav.site-breadcrumbs a {
 html.wp_mm_enable, body.wp_mm_enable {
   overflow: hidden;
 }
+@media screen and (min-width: 959px) {
+  html.wp_mm_enable, body.wp_mm_enable {
+    overflow: visible;
+  }
+}
 
 @media screen and (min-width: 960px) {
   body.wp_mm_enable {
@@ -191,11 +196,22 @@ html.wp_mm_enable, body.wp_mm_enable {
   display: block;
   opacity: 1;
 }
+@media screen and (min-width: 959px) {
+  .body_overlay.enabled {
+    display: none;
+    opacity: 0;
+  }
+}
 
 .wp_mm_wrapper.active {
   z-index: 999;
   opacity: 1;
   right: 0;
+}
+@media screen and (min-width: 959px) {
+  .wp_mm_wrapper.active {
+    opacity: 0;
+  }
 }
 .wp_mm_wrapper.active ul.main-menu {
   display: block;
@@ -478,7 +494,7 @@ div#wrap #top-bar-wrap {
 }
 
 #site-navigation-wrap nav#site-navigation .dropdown-menu ul li a.menu-link {
-  text-transform: none;
+  text-transform: lowercase;
 }
 
 #site-navigation-wrap nav#site-navigation ul#menu-main-menu li.menu-item ul.sub-menu a {
