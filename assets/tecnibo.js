@@ -42,6 +42,18 @@
             }
 
         });
+        /* Add close button submenu */
+        
+        $('nav.main-navigation ul.main-menu').find('ul.megamenu').each(function(){
+            var $closeSubmenu = $("<span/>", {"class": "close fa fa-times"});
+            $(this).append($closeSubmenu);
+            $(this).find('span.close').each(function(){
+                $(this).on('click',function(){
+                    $(this).closest('ul').css('display','none');
+                });
+            });
+        });
+        
     });
 
 
