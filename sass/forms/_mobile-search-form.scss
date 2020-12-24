@@ -5,11 +5,21 @@
         padding: 10px 5px;
         input[type=search]{
             padding-left: 10px;
+            border-left: 2px solid #54595F;
+            border-top: 2px solid #54595F;
+            border-bottom: 2px solid #54595F;
+            border-radius: 0px !important;
+            background-color: #fff;
+            font-family: "Arial", Sans-serif;
+            font-size: 14px;
+            letter-spacing: 1.8px
         }
-            button{
-            min-width: calc( 6.1 * 10px );
-            background-color: rgba(173, 169, 169, 0);
-            font-size: 15px;
+        button{
+            min-width: calc( 9.1 * 5px );
+            background-color: #54595F;
+            border-radius: 0;
+            font-size: 12px;
+            color: #F5F5F5;
         }
     }   
 }
