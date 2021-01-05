@@ -211,6 +211,7 @@ html.wp_mm_enable, body.wp_mm_enable {
 @media screen and (min-width: 959px) {
   .wp_mm_wrapper.active {
     opacity: 0;
+    right: -300px;
   }
 }
 .wp_mm_wrapper.active ul.main-menu {

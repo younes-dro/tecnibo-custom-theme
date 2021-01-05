@@ -38,6 +38,7 @@ body.wp_mm_enable{
     right: 0;
     @media screen and (min-width: 959px){
         opacity: 0;
+        right: -300px;
     }
     ul.main-menu{
         display: block;
